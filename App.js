@@ -1,7 +1,7 @@
 class NotesApplication {
-	let List = [];
+	let list = [];
 	constructor(author){
 		this.authors = author;
-		this.List = noteList;
+		this.list = noteList;
 	}
 }
