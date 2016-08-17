@@ -26,4 +26,8 @@ class NotesApplication {
 			By Author ${author}`;
 		}
 	}
+
+	get(note_id) {
+		return this.list[note_id];
+	}
 }
