@@ -35,7 +35,7 @@ class NotesApplication {
 	 * function for get the note with the pass argument of note_id
 	 */
 
-	function get(note_id) {
+	function getIt(note_id) {
 		return this.list[note_id];
 	}
 
@@ -60,11 +60,23 @@ class NotesApplication {
 	 *  deleting the list by using the note id
 	 */
 
-	 function delete(note_id) {
+	 function deleteIt(note_id) {
 	 	let indexCheck = this.list[note_id];
 	 	if(indexCheck > -1) {
 	 		this.list.splice(indexCheck, 1);
 	 	}
 	 }
+
+	 /**
+	  * function to edit the note by searching for the index
+	  */
+	 function edit(note_id, new_content) {
+	 	if(note_id > -1) {
+	 		this.list[note_id] = new_content;
+	 	}
+	 	return false;
+	 }
+
+
 
 }
