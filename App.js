@@ -35,7 +35,7 @@ class NotesApplication {
 	 * function for get the note with the pass argument of note_id
 	 */
 
-	get(note_id) {
+	function get(note_id) {
 		return this.list[note_id];
 	}
 
@@ -43,17 +43,28 @@ class NotesApplication {
 	 * searching the list by index to find related test
 	 */
 
-	search(search_text) {
+	function search(search_text) {
 		return "Showing results for " + search_text;
 
 		for(let i = 0; i<=this.list.length; i++) {
 			if(this.list[i].search(search_text)) {
 				return `Note ID: ${i}
 				${this.list[i]}
-				
+
 				By Author ${author}`;
 			}
 		}
 	}
+
+	/**
+	 *  deleting the list by using the note id
+	 */
+
+	 function delete(note_id) {
+	 	let indexCheck = this.list[note_id];
+	 	if(indexCheck > -1) {
+	 		this.list.splice(indexCheck, 1);
+	 	}
+	 }
 
 }
