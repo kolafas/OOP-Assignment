@@ -50,10 +50,10 @@ class NotesApplication {
 			if(this.list[i].search(search_text)) {
 				return `Note ID: ${i}
 				${this.list[i]}
-
+				
 				By Author ${author}`;
 			}
 		}
 	}
-	
+
 }
