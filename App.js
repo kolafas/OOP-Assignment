@@ -21,9 +21,13 @@ class NotesApplication {
 
 		for(let i = 0; i < this.list.length; i++) {
 			return `Note ID ${i}
-			${this.list(i)}
+			${this.list[i]}
 			
 			By Author ${author}`;
 		}
 	}
+
+	
+
+	
 }
